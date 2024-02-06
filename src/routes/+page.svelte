@@ -74,7 +74,7 @@
     <p>If you're a Svelte user, you're at home. Simply install this package and use it as follows:</p>
     <pre>
       <code>&#x3c;script&#x3e;
-  import Control from "@sevn/window-control-ui";
+  import &#x7b; Control &#x7d; from "@sevn/window-control-ui";
 &#x3c;/script&#x3e;
 
 &#x3c;Control
