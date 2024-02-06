@@ -18,6 +18,29 @@
   }
 </script>
 
+<svelte:head>
+  <title>Window Control UI - Native-like window control UI for web desktop applications.</title>
+  <meta name="description" content="Native-like window control UI for web desktop applications.">
+
+  <meta property="og:title" content="Window Control UI - Native-like window control UI for web desktop applications.">
+  <meta property="og:url" content="https://sevn.github.io/window-control-ui">
+  <meta property="og:image" content="https://sevn.github.io/window-control-ui/og.png">
+  <meta property="og:image:url" content="https://sevn.github.io/window-control-ui/og.png">
+  <meta property="og:image:width" content="1440">
+  <meta property="og:image:height" content="560">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Native-like window control UI for web desktop applications.">
+  <meta property="og:description" content="Window Control UI - Native-like window control UI for web desktop applications.">
+  <meta property="og:site_name" content="Window Control UI">
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:description" content="Window Control UI - Native-like window control UI for web desktop applications."/>
+  <meta name="twitter:image" content="https://medias.itatiaia.com.br/dims4/default/88b7ff0/2147483647/strip/true/crop/1000x563+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F6a%2F88%2Fd1cc4bd1fe51ee34f8d3722c206e%2Fprefeitura-pretende-acec13f5-b864-4fb0-ac0c-aaf68f372e4f.jpg"/>
+  <meta name="twitter:image:alt" content="Window Control UI - Native-like window control UI for web desktop applications."/>
+  <meta name="twitter:site" content="@kazzkiq"/>
+  <meta name="twitter:title" content="Window Control UI - Native-like window control UI for web desktop applications."/>
+</svelte:head>
+
 <main>
   <h1>Window Control UI</h1>
   <h2>Native-like window control UI for web desktop applications.</h2>
@@ -86,7 +109,8 @@ control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x
 
 <section class="credits">
   <h3>Credits</h3>
-  Created by Claudio Holanda Jr. (<a href="https://twitter.com/kazzkiq">@kazzkiq</a>), made possible by <a href="https://sevn.technology">SEVN</a>.
+  <p>Created by Claudio Holanda Jr. (<a href="https://twitter.com/kazzkiq">@kazzkiq</a>), made possible by <a href="https://sevn.technology">SEVN</a>.</p>
+  <p>Made in 🇧🇷</p>
 </section>
 </main>
 
