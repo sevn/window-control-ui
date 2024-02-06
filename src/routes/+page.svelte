@@ -1,3 +1,12 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Control from "$lib/components/Control.svelte";
+
+</script>
+
+<div style="padding: 200px">
+  <Control
+    os="windows"
+    on:close={() => window.alert("Closed!")}
+    on:minimize={() => window.alert("Minimized!")}
+    on:maximize={() => window.alert("Maximized!")} />
+</div>
