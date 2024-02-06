@@ -15,6 +15,10 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest"
 	},
+	"author": {
+		"name": "Claudio Holanda Jr.",
+		"url": "https://github.com/kazzkiq"
+	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
