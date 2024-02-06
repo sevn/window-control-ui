@@ -4,10 +4,11 @@
 
   type os = "macos" | "windows";
   export let os: os = "macos";
+  export let darkmode: boolean = false;
 </script>
 
 {#if os === "macos"}
   <ControlMacOs on:close on:maximize on:minimize />
 {:else}
-  <ControlWindows on:close on:maximize on:minimize />
+  <ControlWindows {darkmode} on:close on:maximize on:minimize />
 {/if}

@@ -2,16 +2,18 @@
 	import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
+
+  export let darkmode = false;
 </script>
 
 <nav class="controls">
-  <button class="btn minimize" on:click={() => dispatch('minimize')}>
+  <button class="btn minimize" class:darkmode on:click={() => dispatch('minimize')}>
     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="1" fill="none" class="icon"><path fill="#000" d="M0 0h10v1H0z"/></svg>
   </button>
-  <button class="btn maximize" on:click={() => dispatch('maximize')}>
+  <button class="btn maximize" class:darkmode on:click={() => dispatch('maximize')}>
     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" class="icon"><rect width="9" height="9" x=".5" y=".5" stroke="#000" rx="1.5"/></svg>
   </button>
-  <button class="btn close" on:click={() => dispatch('close')}>
+  <button class="btn close" class:darkmode on:click={() => dispatch('close')}>
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
       <rect x="0.707123" y="1.52588e-05" width="13.4895" height="1" transform="rotate(45 0.707123 1.52588e-05)" fill="black"/>
       <rect x="10.2456" y="0.707108" width="13.4895" height="1" transform="rotate(135 10.2456 0.707108)" fill="black"/>
@@ -38,6 +40,16 @@
 
       &:active {
         background: rgba(#000, 0.06);
+      }
+
+      &.darkmode { 
+        .icon {
+          svg {
+            path, line {
+              fill: #fff;
+            }
+          }
+        }
       }
 
       .icon {
