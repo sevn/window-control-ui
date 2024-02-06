@@ -2,7 +2,8 @@
 	import Control from "$lib/components/Control.svelte";
 
   let os: "macos" | "windows" = "macos";
-  let event = "Click in the window buttons to see the event.";
+  let event = "Click in the window controls to fire the events.";
+  let darkmode = false;
 
   function switchOS() {
     if (os === "macos") {
@@ -23,10 +24,11 @@
   <code class="npm">npm i @sevn/window-control-ui</code>
 
   <section>
-    <div class="window-example">
+    <div class="window-example" class:darkmode>
     <div class="controls-wrapper" class:windows={os === "windows"}>
       <Control
         {os}
+        {darkmode}
         on:close={() => fireEvent("Closed")}
         on:minimize={() => fireEvent("Minimized")}
         on:maximize={() => fireEvent("Maximized")}
@@ -34,17 +36,13 @@
     </div>
     <div class="action">
       <button on:click={switchOS}>
-        {#if os === "macos"}
-          See Windows
-        {:else}
-          See macOS
-        {/if}
+        Toggle Windows/macOS
       </button>
-      <button on:click={switchOS}>
+      <button on:click={() => darkmode = !darkmode}>
         Toggle darkmode
       </button>
-      <code class="event">{event}</code>
     </div>
+    <code class="event">{event}</code>
   </div>
   </section>
 
@@ -58,6 +56,7 @@
 
 &#x3c;Control
   os="windows | macos"
+  darkmode=&#x7b;true | false&#x7d;
   on:minimize
   on:maximize
   on:close /&#x3e;</code>
@@ -71,6 +70,7 @@ const control = new Control&#x28;&#x7b;
   target: document.body, // target DOM element to render
   props: &#x7b;
     os: "windows | macos",
+    darkmode: true | false
   &#x7d;
 &#x7d;&#x29;
 
@@ -120,6 +120,7 @@ control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x
       margin: 30px auto;
       background: #eee;
       padding: 10px 20px;
+      border-radius: 3px;
     }
 
     .window-example {
@@ -134,20 +135,20 @@ control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x
       box-shadow: 0 0 0 1px rgba(#000, 0.1), 0 8px 15px rgba(#000, 0.1);
       overflow: hidden;
 
-      &.example-color-1 {
-        background-color: bisque;
-      }
-
-      &.example-color-2 {
-        background-color: chocolate;
-      }
-
-      &.example-color-3 {
-        background-color: dodgerblue;
-      }
-
-      &.example-color-4 {
+      &.darkmode {
         background-color: #222;
+
+        .action {
+          button {
+            color: #fff;
+            border-color: rgba(#fff, 0.3);
+          }
+        }
+
+        code {
+          background: rgba(#fff, 0.2);
+          color: #fff;
+        }
       }
 
       .controls-wrapper {
@@ -157,7 +158,7 @@ control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x
 
         &.windows {
           padding: 0;
-          padding-bottom: 13px;
+          padding-bottom: 14px;
           justify-content: flex-end;
         }
       }
@@ -167,21 +168,26 @@ control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        padding-bottom: 30px;
 
         button {
           border-radius: 3px;
           border: 1px solid #ccc;
           background: none;
           padding: 4px 6px;
-        }
 
-        code {
-          display: block;
-          text-align: center;
-          margin: 10px;
+          & + button {
+            margin-left: 10px;
+          }
         }
+      }
+
+      code {
+        display: block;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 3px;
+        border-radius: 3px;
       }
     }
 
@@ -199,6 +205,7 @@ control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x
           padding: 10px;
           background: #eee;
           color: #000000;
+          border-radius: 3px;
           // white-space: pre-line;
         }
       }

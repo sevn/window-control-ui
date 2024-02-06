@@ -8,16 +8,13 @@
 
 <nav class="controls">
   <button class="btn minimize" class:darkmode on:click={() => dispatch('minimize')}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="1" fill="none" class="icon"><path fill="#000" d="M0 0h10v1H0z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="1" fill="none" class="icon"><path d="M0 0h10v1H0z"/></svg>
   </button>
   <button class="btn maximize" class:darkmode on:click={() => dispatch('maximize')}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" class="icon"><rect width="9" height="9" x=".5" y=".5" stroke="#000" rx="1.5"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" class="icon"><path fill-rule="evenodd" d="M8 1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1ZM2 0a2 2 0 0 0-2 2v6c0 1.1.9 2 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Z" clip-rule="evenodd"/></svg>
   </button>
   <button class="btn close" class:darkmode on:click={() => dispatch('close')}>
-    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
-      <rect x="0.707123" y="1.52588e-05" width="13.4895" height="1" transform="rotate(45 0.707123 1.52588e-05)" fill="black"/>
-      <rect x="10.2456" y="0.707108" width="13.4895" height="1" transform="rotate(135 10.2456 0.707108)" fill="black"/>
-      </svg>      
+    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" class="icon"><path d="m.7 0 9.55 9.54-.71.7L0 .72.7 0Z"/><path d="M10.25.7.7 10.26 0 9.54 9.54 0l.7.7Z"/></svg>
   </button>
 </nav>
 
@@ -43,11 +40,17 @@
       }
 
       &.darkmode { 
+        &:hover {
+          background: rgba(#fff, 0.04);
+        }
+
+        &:active {
+          background: rgba(#fff, 0.06);
+        }
+
         .icon {
-          svg {
-            path, line {
-              fill: #fff;
-            }
+          path {
+            fill: #fff;
           }
         }
       }
@@ -57,6 +60,10 @@
         left: 50%;
         top: 50%;
         transform: translate3d(-50%, -50%, 0);
+
+        path {
+          fill: #000;
+        }
       }
 
       &.minimize {
@@ -70,7 +77,7 @@
           background-color: #C42C1D;
 
           .icon {
-            rect {
+            path {
               fill: #fff;
             }
           }
