@@ -1,58 +1,60 @@
-# create-svelte
+# Window Control UI
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Native-like window control UI for web desktop applications.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```
+npm i @sevn/window-control-ui
 ```
 
-## Developing
+### Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+If you're a Svelte user, you're at home. Simply install this package and use it as follows:
 
-```bash
-npm run dev
+```svelte
+<script>
+  import { Control } from "@sevn/window-control-ui";
+</script>
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+<Control
+  os="windows | macos"
+  darkmode={true | false}
+  on:minimize
+  on:maximize
+  on:close />
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+You can also use with vanilla HTML and JavaScript:
 
-## Building
+```html
+<script src="https://unpkg.com/@sevn/window-control-ui@0.1.14/dist/umd/index.js"></script>
+      
+<script>
+  const control = new WindowControlUI.Control({
+    target: document.body, // target DOM element to render
+    props: {
+      os: "windows | macos",
+      darkmode: true | false
+    }
+  })
 
-To build your library:
-
-```bash
-npm run package
+  control.$on("minimize", () => console.log("mimimized!"));
+  control.$on("maximize", () => console.log("maximized!"));
+  control.$on("close", () => console.log("closed!"));
+</script>
 ```
 
-To create a production version of your showcase app:
+### How do I use it with React?
 
-```bash
-npm run build
-```
+If you're trying to use this project with any non-Svelte (or non-vanilla-or-plain-HTML), please help solve <a href="https://github.com/sevn/window-control-ui/issues/1">this issue</a>.
 
-You can preview the production build with `npm run preview`.
+### How do I position the controls in my Window?
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This project focus only on creating the window controls and the events for you, feel free to use CSS to position them as needed in your application window.
 
-## Publishing
+In this page, for example, we use a `div` called `.controls-wrapper` with Flexbox and padding to position the controls based on the OS.
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+### Credits
 
-To publish your library to [npm](https://www.npmjs.com):
+Created by Claudio Holanda Jr. (<a href="https://twitter.com/kazzkiq">@kazzkiq</a>), made possible by <a href="https://sevn.technology">SEVN</a>.
 
-```bash
-npm publish
-```
+Made in 🇧🇷
