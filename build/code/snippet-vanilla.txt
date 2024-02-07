@@ -1,0 +1,15 @@
+<script src="https://unpkg.com/@sevn/window-control-ui@0.1.14/dist/umd/index.js"></script>
+      
+<script>
+  const control = new WindowControlUI.Control({
+    target: document.body, // target DOM element to render
+    props: {
+      os: "windows | macos",
+      darkmode: true | false
+    }
+  })
+
+  control.$on("minimize", () => console.log("mimimized!"));
+  control.$on("maximize", () => console.log("maximized!"));
+  control.$on("close", () => console.log("closed!"));
+</script>

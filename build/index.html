@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/2.Z0nwPCDW.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.MSX6dH5y.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.J3Cr4dN0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.CNuCSGYK.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.KDCpBxYT.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.X91-gtdx.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.KGw7J8ql.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.jFrdNnrO.js"><title>Window Control UI - Native-like window control UI for web desktop applications.</title><!-- HEAD_svelte-113p326_START --><meta name="description" content="Native-like window control UI for web desktop applications."><meta property="og:title" content="Window Control UI - Native-like window control UI for web desktop applications."><meta property="og:url" content="https://sevn.github.io/window-control-ui"><meta property="og:image" content="https://sevn.github.io/window-control-ui/og.png"><meta property="og:image:url" content="https://sevn.github.io/window-control-ui/og.png"><meta property="og:image:width" content="1440"><meta property="og:image:height" content="560"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="Native-like window control UI for web desktop applications."><meta property="og:description" content="Window Control UI - Native-like window control UI for web desktop applications."><meta property="og:site_name" content="Window Control UI"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="Window Control UI - Native-like window control UI for web desktop applications."><meta name="twitter:image" content="https://medias.itatiaia.com.br/dims4/default/88b7ff0/2147483647/strip/true/crop/1000x563+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F6a%2F88%2Fd1cc4bd1fe51ee34f8d3722c206e%2Fprefeitura-pretende-acec13f5-b864-4fb0-ac0c-aaf68f372e4f.jpg"><meta name="twitter:image:alt" content="Window Control UI - Native-like window control UI for web desktop applications."><meta name="twitter:site" content="@kazzkiq"><meta name="twitter:title" content="Window Control UI - Native-like window control UI for web desktop applications."><!-- HEAD_svelte-113p326_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div>   <main class="svelte-1her7ft"><h1 class="svelte-1her7ft" data-svelte-h="svelte-kvx4xx">Window Control UI</h1> <h2 class="svelte-1her7ft" data-svelte-h="svelte-bg9lag">Native-like window control UI for web desktop applications.</h2> <code class="npm svelte-1her7ft" data-svelte-h="svelte-9lcryg">npm i @sevn/window-control-ui</code> <section><div class="window-example svelte-1her7ft"><div class="controls-wrapper svelte-1her7ft"><nav class="controls svelte-1nt2ix5"><button class="btn close svelte-1nt2ix5" data-svelte-h="svelte-17mcyhc"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="none" class="icon svelte-1nt2ix5"><path fill="#000" fill-opacity=".5" fill-rule="evenodd" d="M6.8 1.16a.65.65 0 1 0-.92-.92L3.97 2.15 2.06.24a.65.65 0 0 0-.92.92l1.91 1.9-1.91 1.92a.65.65 0 1 0 .92.92l1.9-1.91 1.92 1.9a.65.65 0 1 0 .92-.91L4.89 3.07l1.9-1.91Z" clip-rule="evenodd" style="mix-blend-mode:multiply"></path></svg></button> <button class="btn minimize svelte-1nt2ix5" data-svelte-h="svelte-1aqqylz"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="2" fill="none" class="icon svelte-1nt2ix5"><rect width="8" height="1.4" y=".4" fill="#000" fill-opacity=".5" rx=".7" style="mix-blend-mode:multiply"></rect></svg></button> <button class="btn maximize svelte-1nt2ix5" data-svelte-h="svelte-1lqmjui"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="none" class="icon svelte-1nt2ix5"><path fill="#000" fill-opacity=".45" fill-rule="evenodd" d="M1.15.27a1 1 0 0 0-1 1v3.56L4.7.27H1.15Zm3.7 5.6a1 1 0 0 0 1-1V1.33L1.29 5.88h3.56Z" clip-rule="evenodd" style="mix-blend-mode:multiply"></path></svg></button> </nav></div> <div class="action svelte-1her7ft"><button class="svelte-1her7ft" data-svelte-h="svelte-2g3zt7">Toggle Windows/macOS</button> <button class="svelte-1her7ft" data-svelte-h="svelte-ku1r55">Toggle darkmode</button></div> <code class="event svelte-1her7ft">Click in the window controls to fire the events.</code></div></section> <section class="docs"><h3 class="svelte-1her7ft" data-svelte-h="svelte-1wx6xff">Usage</h3> <p data-svelte-h="svelte-10r63fo">If you&#39;re a Svelte user, you&#39;re at home. Simply install this package and use it as follows:</p> <pre class="svelte-1her7ft">      <code class="svelte-1her7ft"><!-- HTML_TAG_START --><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+  import { Control } from &quot;@sevn/window-control-ui&quot;;
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Control</span>
+  <span class="hljs-attr">os</span>=<span class="hljs-string">&quot;windows | macos&quot;</span>
+  <span class="hljs-attr">darkmode</span>=<span class="hljs-string">{true</span> | <span class="hljs-attr">false</span>}
+  <span class="hljs-attr">on:minimize</span>
+  <span class="hljs-attr">on:maximize</span>
+  <span class="hljs-attr">on:close</span> /&gt;</span><!-- HTML_TAG_END --></code>
+    </pre> <p data-svelte-h="svelte-switu7">You can also use with vanilla HTML and JavaScript:</p> <pre class="svelte-1her7ft">    <code class="svelte-1her7ft"><!-- HTML_TAG_START --><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/@sevn/window-control-ui@0.1.14/dist/umd/index.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+      
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+  const control = new WindowControlUI.Control({
+    target: document.body, // target DOM element to render
+    props: {
+      os: &quot;windows | macos&quot;,
+      darkmode: true | false
+    }
+  })
+
+  control.$on(&quot;minimize&quot;, () =&gt; console.log(&quot;mimimized!&quot;));
+  control.$on(&quot;maximize&quot;, () =&gt; console.log(&quot;maximized!&quot;));
+  control.$on(&quot;close&quot;, () =&gt; console.log(&quot;closed!&quot;));
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><!-- HTML_TAG_END --></code>
+  </pre> <h3 class="svelte-1her7ft" data-svelte-h="svelte-m2nd8e">How do I use it with React?</h3> <p data-svelte-h="svelte-202lb4">If you&#39;re trying to use this project with any non-Svelte (or non-vanilla-or-plain-HTML), please help solve <a href="https://github.com/sevn/window-control-ui/issues/1" class="svelte-1her7ft">this issue</a>.</p> <h3 class="svelte-1her7ft" data-svelte-h="svelte-1s21ehs">How do I position the controls in my Window?</h3> <p data-svelte-h="svelte-q8fhft">This project focus only on creating the window controls and the events for you, feel free to use CSS to position them as needed in your application window.</p> <p data-svelte-h="svelte-1fh71gn">In this page, for example, we use a <code class="svelte-1her7ft">div</code> called <code class="svelte-1her7ft">.controls-wrapper</code> with Flexbox and padding to position the controls based on the OS.</p></section> <section class="credits" data-svelte-h="svelte-1eyctf0"><h3 class="svelte-1her7ft">Credits</h3> <p>Created by Claudio Holanda Jr. (<a href="https://twitter.com/kazzkiq" class="svelte-1her7ft">@kazzkiq</a>), made possible by <a href="https://sevn.technology" class="svelte-1her7ft">SEVN</a>.</p> <p>Made in 🇧🇷</p></section> </main> 
+			
+			<script>
+				{
+					__sveltekit_dy5mzd = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,{"type":"data","data":{snippetSvelte:"\u003Cscript>\n  import { Control } from \"@sevn/window-control-ui\";\n\u003C/script>\n\n\u003CControl\n  os=\"windows | macos\"\n  darkmode={true | false}\n  on:minimize\n  on:maximize\n  on:close />",snippetVanilla:"\u003Cscript src=\"https://unpkg.com/@sevn/window-control-ui@0.1.14/dist/umd/index.js\">\u003C/script>\n      \n\u003Cscript>\n  const control = new WindowControlUI.Control({\n    target: document.body, // target DOM element to render\n    props: {\n      os: \"windows | macos\",\n      darkmode: true | false\n    }\n  })\n\n  control.$on(\"minimize\", () => console.log(\"mimimized!\"));\n  control.$on(\"maximize\", () => console.log(\"maximized!\"));\n  control.$on(\"close\", () => console.log(\"closed!\"));\n\u003C/script>"},"uses":{}}];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.MSX6dH5y.js"),
+						import("./_app/immutable/entry/app.KDCpBxYT.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
