@@ -6,10 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 		<link href="./_app/immutable/assets/2.Z0nwPCDW.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.d7EMXZAb.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/entry.8SetJwR6.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.0J0dIgr5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.kX815ZC8.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.CNuCSGYK.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.takjLypg.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.VvjhB46U.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.X91-gtdx.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/0.KGw7J8ql.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/2.jFrdNnrO.js"><title>Window Control UI - Native-like window control UI for web desktop applications.</title><!-- HEAD_svelte-113p326_START --><meta name="description" content="Native-like window control UI for web desktop applications."><meta property="og:title" content="Window Control UI - Native-like window control UI for web desktop applications."><meta property="og:url" content="https://sevn.github.io/window-control-ui"><meta property="og:image" content="https://sevn.github.io/window-control-ui/og.png"><meta property="og:image:url" content="https://sevn.github.io/window-control-ui/og.png"><meta property="og:image:width" content="1440"><meta property="og:image:height" content="560"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="Native-like window control UI for web desktop applications."><meta property="og:description" content="Window Control UI - Native-like window control UI for web desktop applications."><meta property="og:site_name" content="Window Control UI"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="Window Control UI - Native-like window control UI for web desktop applications."><meta name="twitter:image" content="https://medias.itatiaia.com.br/dims4/default/88b7ff0/2147483647/strip/true/crop/1000x563+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F6a%2F88%2Fd1cc4bd1fe51ee34f8d3722c206e%2Fprefeitura-pretende-acec13f5-b864-4fb0-ac0c-aaf68f372e4f.jpg"><meta name="twitter:image:alt" content="Window Control UI - Native-like window control UI for web desktop applications."><meta name="twitter:site" content="@kazzkiq"><meta name="twitter:title" content="Window Control UI - Native-like window control UI for web desktop applications."><!-- HEAD_svelte-113p326_END -->
@@ -44,8 +44,9 @@
 			
 			<script>
 				{
-					__sveltekit_1pl6s8s = {
-						base: new URL(".", location).pathname.slice(0, -1)
+					__sveltekit_1jhh6nu = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/docs"
 					};
 
 					const element = document.currentScript.parentElement;
@@ -53,8 +54,8 @@
 					const data = [null,{"type":"data","data":{snippetSvelte:"\u003Cscript>\n  import { Control } from \"@sevn/window-control-ui\";\n\u003C/script>\n\n\u003CControl\n  os=\"windows | macos\"\n  darkmode={true | false}\n  on:minimize\n  on:maximize\n  on:close />",snippetVanilla:"\u003Cscript src=\"https://unpkg.com/@sevn/window-control-ui@0.1.14/dist/umd/index.js\">\u003C/script>\n      \n\u003Cscript>\n  const control = new WindowControlUI.Control({\n    target: document.body, // target DOM element to render\n    props: {\n      os: \"windows | macos\",\n      darkmode: true | false\n    }\n  })\n\n  control.$on(\"minimize\", () => console.log(\"mimimized!\"));\n  control.$on(\"maximize\", () => console.log(\"maximized!\"));\n  control.$on(\"close\", () => console.log(\"closed!\"));\n\u003C/script>"},"uses":{}}];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.d7EMXZAb.js"),
-						import("./_app/immutable/entry/app.takjLypg.js")
+						import("./_app/immutable/entry/start.0J0dIgr5.js"),
+						import("./_app/immutable/entry/app.VvjhB46U.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
