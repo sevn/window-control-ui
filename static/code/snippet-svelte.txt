@@ -1,0 +1,10 @@
+<script>
+  import { Control } from "@sevn/window-control-ui";
+</script>
+
+<Control
+  os="windows | macos"
+  darkmode={true | false}
+  on:minimize
+  on:maximize
+  on:close />

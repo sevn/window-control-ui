@@ -1,6 +1,26 @@
 <script lang="ts">
 	import Control from "$lib/components/Control.svelte";
 
+  // Using ES6 import syntax
+  import hljs from 'highlight.js/lib/core';
+  import xml from 'highlight.js/lib/languages/xml';
+
+  /** @type {import('./$types').PageData} */
+	export let data;
+
+  // Then register the languages you need
+  hljs.registerLanguage('xml', xml);
+
+  const highlightedVanilla = hljs.highlight(
+    data.snippetVanilla,
+    { language: 'xml' }
+  ).value;
+
+  const highlightedSvelte = hljs.highlight(
+    data.snippetSvelte,
+    { language: 'xml' }
+  ).value;
+
   let os: "macos" | "windows" = "macos";
   let event = "Click in the window controls to fire the events.";
   let darkmode = false;
@@ -15,6 +35,10 @@
 
   function fireEvent(name: string) {
     event = `Event fired: ${new Date().toISOString()} - ${name}`
+  }
+
+  async function loadVanillaCode() {
+
   }
 </script>
 
@@ -73,34 +97,18 @@
     <h3>Usage</h3>
     <p>If you're a Svelte user, you're at home. Simply install this package and use it as follows:</p>
     <pre>
-      <code>&#x3c;script&#x3e;
-  import &#x7b; Control &#x7d; from "@sevn/window-control-ui";
-&#x3c;/script&#x3e;
-
-&#x3c;Control
-  os="windows | macos"
-  darkmode=&#x7b;true | false&#x7d;
-  on:minimize
-  on:maximize
-  on:close /&#x3e;</code>
+      <code>{@html highlightedSvelte}</code>
     </pre>
 
-  <p>If you want to use it in any other project that isn't Svelte, it's very easy too:</p>
+  <p>You can also use with vanilla HTML and JavaScript:</p>
+
   <pre>
-    <code>import Control from "@sevn/window-control-ui";
-
-const control = new Control&#x28;&#x7b;
-  target: document.body, // target DOM element to render
-  props: &#x7b;
-    os: "windows | macos",
-    darkmode: true | false
-  &#x7d;
-&#x7d;&#x29;
-
-control.$on&#x28;"minimize", &#x28;&#x29; =&gt; console.log&#x28;"mimimized!"&#x29;&#x29;;
-control.$on&#x28;"maximize", &#x28;&#x29; =&gt; console.log&#x28;"maximized!"&#x29;&#x29;;
-control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x29;;</code>
+    <code>{@html highlightedVanilla}</code>
   </pre>
+
+  <h3>How do I use it with React?</h3>
+
+  <p>If you're trying to use this project with any non-Svelte (or non-vanilla-or-plain-HTML), please help solve <a href="https://github.com/sevn/window-control-ui/issues/1">this issue</a>.</p>
 
   <h3>How do I position the controls in my Window?</h3>
   <p>This project focus only on creating the window controls and the events for you, feel free to use CSS to position them as needed in your application window.</p>
@@ -230,7 +238,30 @@ control.$on&#x28;"close", &#x28;&#x29; =&gt; console.log&#x28;"closed!"&#x29;&#x
           background: #eee;
           color: #000000;
           border-radius: 3px;
-          // white-space: pre-line;
+
+          :global(.hljs-tag) {
+            color: #bf1262;
+          }
+
+          :global(.hljs-attr) {
+            color: #5412bf;
+          }
+
+          :global(.hljs-string) {
+            color: #023271;
+          }
+
+          :global(.hljs-keyword) {
+            color: #bf124f;
+          }
+
+          :global(.hljs-comment) {
+            color: #888;
+          }
+
+          :global(.hljs-literal) {
+            color: #cb6b0a;
+          }
         }
       }
 
