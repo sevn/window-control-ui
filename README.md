@@ -1,6 +1,9 @@
-# Window Control UI
 
-## Native-like window control UI for web desktop applications.
+<p align="center"><b>Window Control UI</b></p>
+<p align="center">Native-like window control UI for web desktop applications.</p>
+
+<p align="center"><img width="445" alt="Screenshot 2024-02-07 at 19 52 05" src="https://github.com/sevn/window-control-ui/assets/1953194/bcffd4e7-1180-4013-b15a-04b4cabdc611"></p>
+
 
 ```
 npm i @sevn/window-control-ui
